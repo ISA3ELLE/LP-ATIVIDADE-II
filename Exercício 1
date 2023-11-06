@@ -1,0 +1,22 @@
+
+int main() {
+    int temp;
+
+    printf("Digite a temperatura em graus Celsius: ");
+    scanf("%d", &temp);
+  
+  system("clear||cls");
+
+    if (temp > 25) {
+        printf("Clima: Ensolarado\n");
+    } else if (temp < 15) {
+        printf("Clima: Chuvoso\n");
+    } else {
+        printf("Clima: Nublado\n");
+    }
+
+ printf ("O clima está %d graus Celsius!", temp);
+    
+
+    return 0;
+}
