@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+
+int main()
+{
+    setlocale(LC_ALL, "");
+
+    int numero;
+    int Maiornumero = 0;
+    int menorNumero = 999;
+
+    for (int i = 0; i < 2; i++)
+    {
+        printf("Digite o %d° número: ", i + 1);
+        scanf("%d", &numero);
+
+        Maiornumero = numero > Maiornumero ? numero : Maiornumero;
+        menorNumero = numero < menorNumero ? numero : menorNumero;
+    }
+    system("cls");
+
+    printf("O maior número digitado: %d \n", Maiornumero);
+    printf("O menor número digitado: %d \n", menorNumero);
+
+    return 0;
+}
