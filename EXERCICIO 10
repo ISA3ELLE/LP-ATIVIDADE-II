@@ -1,0 +1,43 @@
+
+
+int main()
+{
+
+    int num1;
+    int num2;
+    int soma;
+    int subtra;
+    char operacao;
+
+    printf("Digite a operação matemática desejada '+' ou '-': ");
+    scanf("%c", &operacao);
+
+    printf("\nDigite o 1º número: ");
+    scanf("%d", &num1);
+
+    printf("Digite o 2º número: ");
+    scanf("%d", &numeroDois);
+
+       soma = (num1 + numeroDois);
+       subtra = (num1 - numeroDois);
+
+    switch (operacao)
+    {
+    case '+':
+        printf("\nResultado da soma: %d \n", soma);
+
+        break;
+    case '-': 
+        printf("\nResultado da subtração: %d \n", subtra);
+
+        break;    
+    default:
+        printf("Operção digitada errada.");
+        break;
+    }
+
+
+
+
+    return 0;
+}
