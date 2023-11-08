@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+
+int main () {
+
+    setlocale(LC_ALL, "");
+
+    float nota;
+
+
+    printf("Digite a nota do aluno: ");
+    scanf("%f", &nota);
+
+    system("cls");
+
+    if (nota >= 9){
+        printf("Classificado: Excelente \n");
+
+    } else if (nota >= 7 && nota < 9) {
+        printf("Classificado: Bom \n");
+
+    } else if (nota >= 5 && nota < 7) {
+        printf("Classificado: Razoavel \n");
+
+    } else if (nota < 5) { 
+        printf("Classificado: Insuficiente \n");
+
+    }
+
+
+
+
+
+    return 0;
+}
