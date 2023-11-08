@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int qnotas = 0;
+    float nota = 0;
+    float media = 0;
+    float soma = 0;
+    int i;
+
+    printf("Quantas notas deseja inserir: ");
+    scanf("%d", &qnotas);
+
+    printf("\n");
+
+    for (i = 0; i < qnotas; i++)
+    {
+        printf("Digite a %dª nota: ", i + 1);
+        scanf("%f", &nota);
+
+        soma += nota;
+    }
+
+    media = (soma / (float)qnotas);
+
+    system("clear||cls");
+
+    printf("Quantidade de notas: %d \n", qnotas);
+    printf("A média é: %.1f \n", media);
+    printf("Soma das notas: %.0f \n", soma);
+
+    return 0;
+}
