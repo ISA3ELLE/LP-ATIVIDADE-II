@@ -1,0 +1,25 @@
+ #include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    setlocale(LC_ALL, "portuguese");
+
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    system("clear||cls");
+
+    if (idade >= 18) {
+        printf("Acesso permitido!\n");
+
+    } else {
+        printf("Acesso negado.\n");
+    }
+
+    return 0;
+}
