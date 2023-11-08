@@ -1,32 +1,36 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <string.h>
 
-  /*Você é um desenvolvedor de e-commerce e está trabalhando em um novo sistema de descontos. 
-  O sistema oferece um desconto de 10% para compras acima de R$ 100,00 se a compra for feita em um dia de semana. 
-  Se a compra for feita em um fim de semana, o desconto será de 15% sobre o valor da compra acima de R$ 100,00.
-*/
 int main() {
-   float valor;
-   float desconto;
-   char escolha;
-   
+    float valor;
+    int escolha;
+    float desconto = 0;
 
-   printf("DIGITE O VALOR: ");
-   scanf("%f", &valor);
-   printf("\nDIGITE A OPÇÃO DESEJADA: ");
-   printf("\nDIGITE 'F' PARA FINAL DE SEMANA\n");
-   print("DIGITE 'D' PARA DIA DA SEMANA");
-   scanf("%c", &escolha);
+    printf("Digite o valor da compra: ");
+    scanf("%f", &valor);
 
+    if (valor > 100) {
+        printf("Informe o dia da semana (1. Segunda, 2. Terça, ..., 7. Domingo): ");
+        scanf("%d", &escolha);
 
-   switch (escolha)
-case 'F':
-if(valor > 100){
-    desconto = valor * 0.15;
+        int diaDeSemana = (escolha >= 1 && escolha <= 5); 
 
-    printf("");
+        if (diaDeSemana) {
+            desconto = valor * 0.10; 
+        } else {
+            desconto = valor * 0.15; 
+        }
 
+        printf("Desconto aplicado: R$ %.2f\n", desconto);
+        valor -= desconto;
+    } else {
+        printf("Nenhum desconto empregado\n");
+    }
 
+    printf("Valor total da compra: R$ %.2f\n", valor);
 
-}valor -= desconto
+    return 0;
+}
